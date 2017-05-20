@@ -1,0 +1,2 @@
+$localhostvbs = "C:\testfolder\testbatchfile.bat","C:\windows\winsxs\bla\bla.bat","C:\windows\system32\test.vbs","D:\programming\test.ps1"
+$localhostvbs | where-object { !( Select-string -inputobject $_ -pattern ".\:\\windows\\winsxs.*" -list)} | where-object { !( select-string -inputobject $_ -pattern ".\:\\windows\.*")} | where-object { !( select-string -inputobject $_ -pattern ".\:\\Program Files \(x86\)\\.*")}
