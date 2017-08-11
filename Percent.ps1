@@ -7,4 +7,4 @@
 gci | %{ cat $_.name }
 
 ####----> stitch all files in a directory together
-gci | %{ cat $_.name } | out-file bla.txt
+gci | %{ cat $_ } | out-file bla.txt
