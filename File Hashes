@@ -1,0 +1,9 @@
+<#
+  Retrieve hashes about files
+#>
+
+####----> Get SHA256 of a file
+Get-FileHash file.bla
+
+####----> Get an MD5 of a file
+Get-FileHash -algorithm md5 file.bla
