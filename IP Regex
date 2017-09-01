@@ -1,0 +1,1 @@
+$someipaddress | select-string -pattern "^[0-255]{3}"
