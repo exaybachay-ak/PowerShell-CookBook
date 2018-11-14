@@ -1,0 +1,9 @@
+#Creating a bunch of text to search
+$content = "This is a bunch of text that I want to search for a [specific string] using a powershell regex"
+
+#Creating my regex using .NET regex class
+#https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?redirectedfrom=MSDN&view=netframework-4.7.2
+[regex]$pattern = '\[.*\]'
+
+#Searching through text for a match
+$foundstring = $pattern.Matches($content)
