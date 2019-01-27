@@ -1,0 +1,2 @@
+#Search Sysmon Events, and filter out noise like LLMNR, multicast traffic, and SSDP
+Get-WinEvent -FilterHashtable @{logname="Microsoft-Windows-Sysmon/Operational";id=3;} | Where {$_.message -notlike "*224.0.0.252*" -and $_.message -notlike "*Image:*chrome*" -and $_.message -notlike "*EPSecurityService*" -and $_.message -notlike "*SourcePortName: ssdp*" -and $_.message -notlike "*SourcePortName: llmnr*"} | Select-Object -Property message | Format-List
