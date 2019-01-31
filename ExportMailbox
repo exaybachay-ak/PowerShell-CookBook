@@ -1,0 +1,18 @@
+### ---> Get available exchange commands
+Get-ExCommand
+
+### ---> Provide permissions to a user, necessary to export a mailbox
+New-ManagementRoleAssignment -role "Mailbox Import Export" -User blah
+
+#########################################################
+##  Need to provide both share and file permissions to ##
+##  Exchange Trusted Subsystem for FilePath            ##
+#########################################################
+
+### ---> Perform mailbox export
+New-MailboxExportRequest -mailbox $targetuser -filepath $targetpath
+
+### ---> Monitor export status
+###      -if there are multiple exports, you have to pick yours and change the array number below accordingly
+$exports = get-MailboxExportRequest
+$exports[3] | get-MailboxExportRequestStatistics
