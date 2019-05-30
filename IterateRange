@@ -2,3 +2,17 @@
 ForEach-Object{
 	write-output $_
 }
+
+#Percent is the equivalent of ForEach-Object
+65..91 | 
+%{
+    #Can iterate letters using char
+    [char]$_
+}
+
+#Can define alternative sets/ranges using an array
+$blah = "uno","dos","tres","cuatro","cinco","seis"
+2..5 |
+%{
+    $blah[$_]
+}
