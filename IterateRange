@@ -1,0 +1,4 @@
+1262..1408 | 
+ForEach-Object{
+	write-output $_
+}
