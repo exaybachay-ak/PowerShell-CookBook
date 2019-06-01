@@ -1,6 +1,9 @@
+#Download all of your bank statements
+#  You can do this faster by getting a Chrome extension to download multiple links at the same time
+
 #Download PDFGrep here:
 #  http://soft.rubypdf.com/software/pdfgrep-windows-version
 
-#Now, browse to your directory and run the recursion command
+#Now, browse to your directory and run the recursive command
 cd C:\users\blah\directory
 gci | foreach-object { .\pdfgrep.exe -i .*something.* $_ }
