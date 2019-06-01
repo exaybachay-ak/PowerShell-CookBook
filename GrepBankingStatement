@@ -1,0 +1,6 @@
+#Download PDFGrep here:
+#  http://soft.rubypdf.com/software/pdfgrep-windows-version
+
+#Now, browse to your directory and run the recursion command
+cd C:\users\blah\directory
+gci | foreach-object { .\pdfgrep.exe -i .*something.* $_ }
