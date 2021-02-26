@@ -1,0 +1,7 @@
+# https://www.powershellgallery.com/packages/ps2exe/1.0.5
+
+# Run powershell as administrator, then type:
+#    Install-Module -Name ps2exe -RequiredVersion 1.0.5
+
+# Compile by typing ps2exe and then your script
+#    E.g. "ps2exe .\powershift.ps1"
