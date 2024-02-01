@@ -1,1 +1,2 @@
-$logname = "$((pwd).path)\powerScan_$(get-date -format "yyyyMMMd")_$(get-date -format "hhmmsss").log"
+$scriptname = "powerscan"
+$logname = "$((pwd).path)\$scriptname_$(get-date -format "yyyyMMMd")_$(get-date -format "hhmmsss").log"
